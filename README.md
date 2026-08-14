@@ -1,108 +1,70 @@
-[README.md](https://github.com/user-attachments/files/31083052/README.md)
+# Getting Started with Create React App
 
-A full-stack exam management platform built for STEM assessments, with a custom rich-text editor that supports mathematical and chemical notation out of the box.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-![MERN](https://img.shields.io/badge/stack-MERN-informational)
-![React](https://img.shields.io/badge/frontend-React%2019-61DAFB?logo=react)
-![Node](https://img.shields.io/badge/backend-Node%2FExpress-339933?logo=node.js)
-![MongoDB](https://img.shields.io/badge/database-MongoDB-47A248?logo=mongodb)
-![License](https://img.shields.io/badge/license-MIT-green)
+## Available Scripts
 
-## Overview
+In the project directory, you can run:
 
-QuizPro solves a problem most quiz/exam builders ignore: writing STEM content (equations, chemical formulas, matrices) is painful in a plain text editor. QuizPro ships a custom rich-text editor purpose-built for this, on top of a complete exam management system — question banks, test creation, and assessment delivery.
+### `npm start`
 
-## Features
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-- **Custom Rich Text Editor** (`RichEditor.jsx`) with:
-  - Math notation via MathLive — fractions, scripts, radicals, matrices
-  - Chemistry notation support
-  - Tab-based navigation between formula slots
-  - Matrix cell navigation
-  - Expanded symbol library
-- **Exam management** — create, organize, and deliver STEM assessments
-- **Full-stack MERN architecture** for a responsive, real-time experience
-- **Modular editor components** — also published separately as [`mirza-math-chem-editor`](https://www.npmjs.com/package/mirza-math-chem-editor) on npm, including `MathRibbon`, `ChemRibbon`, `CustomMathEditor`, and `FloatingMathChemTable`
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-## Tech Stack
+### `npm test`
 
-| Layer      | Technology                  |
-|------------|------------------------------|
-| Frontend   | React 19                    |
-| Backend    | Node.js, Express             |
-| Database   | MongoDB                      |
-| Math/Chem  | MathLive, KaTeX               |
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## Project Structure
+### `npm run build`
 
-```
-quizpro/
-├── client/                 # React frontend
-│   ├── src/
-│   │   ├── components/
-│   │   │   └── RichEditor.jsx
-│   │   └── ...
-├── server/                 # Express backend
-│   ├── routes/
-│   ├── models/
-│   └── ...
-├── .env.example
-└── README.md
-```
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## Getting Started
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-### Prerequisites
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-- Node.js (v18+)
-- MongoDB (local instance or Atlas connection string)
-- npm or yarn
+### `npm run eject`
 
-### Installation
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-```bash
-# Clone the repo
-git clone https://github.com/<your-username>/quizpro.git
-cd quizpro
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-# Install backend dependencies
-cd server
-npm install
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-# Install frontend dependencies
-cd ../client
-npm install
-```
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-### Environment Variables
+## Learn More
 
-Create a `.env` file in the `server` directory:
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-```env
-MONGODB_URI=your_mongodb_connection_string
-PORT=5000
-JWT_SECRET=your_jwt_secret
-```
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Running Locally
+### Code Splitting
 
-```bash
-# Start the backend (from /server)
-npm run dev
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-# Start the frontend (from /client)
-npm run dev
-```
+### Analyzing the Bundle Size
 
-The app should now be running at `http://localhost:5173` (or your configured Vite port), with the API on `http://localhost:5000`.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
+### Making a Progressive Web App
 
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-## Contributing
+### Advanced Configuration
 
-Contributions, issues, and feature requests are welcome. Feel free to check the [issues page](https://github.com/<your-username>/quizpro/issues).
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-## Author
+### Deployment
 
-**Mirza**
-- Building AI/ML and full-stack projects, currently pursuing B.Tech in AI & Data Science.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
