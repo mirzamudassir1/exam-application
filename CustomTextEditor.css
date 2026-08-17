@@ -1,0 +1,196 @@
+/* ============================================================
+   Custom Text Editor — reference-style clean UI
+   ============================================================ */
+
+.cte-wrapper {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.cte-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2px;
+    padding: 6px 10px;
+    border-bottom: 1px solid #e5e7eb;
+    background: #fafafa;
+    min-height: 40px;
+}
+
+.cte-toolbar-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    height: 32px;
+    padding: 0 6px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background: transparent;
+    color: #374151;
+    font-size: 15px;
+    line-height: 1;
+    cursor: pointer;
+    transition: background-color 0.12s, border-color 0.12s;
+    flex-shrink: 0;
+}
+
+.cte-toolbar-btn:hover {
+    background: #f3f4f6;
+    border-color: #e5e7eb;
+}
+
+.cte-toolbar-btn.active {
+    background: #dbeafe;
+    border-color: #93c5fd;
+    color: #1d4ed8;
+}
+
+.cte-toolbar-btn strong,
+.cte-toolbar-btn em {
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.cte-toolbar-btn em {
+    font-style: italic;
+    font-weight: 500;
+}
+
+.cte-toolbar-btn .cte-u {
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.cte-toolbar-divider {
+    width: 1px;
+    height: 22px;
+    background: #d1d5db;
+    margin: 0 4px;
+    flex-shrink: 0;
+}
+
+.cte-editor-area {
+    position: relative;
+    min-height: 120px;
+    background: #ffffff;
+    cursor: text;
+}
+
+.cte-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 12px 14px;
+    color: #9ca3af;
+    font-size: 14px;
+    line-height: 1.5;
+    pointer-events: none;
+    user-select: none;
+}
+
+.cte-content {
+    min-height: 100px;
+    max-height: 360px;
+    overflow-y: auto;
+    padding: 12px 14px;
+    color: #111827;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.55;
+    outline: none;
+    word-wrap: break-word;
+    box-sizing: border-box;
+}
+
+.cte-content:focus {
+    outline: none;
+}
+
+/* Lists */
+.cte-content ul,
+.cte-content ol {
+    margin: 0.25em 0;
+    padding-left: 1.75em;
+}
+
+.cte-content ul {
+    list-style-type: disc;
+}
+
+.cte-content ol {
+    list-style-type: decimal;
+}
+
+.cte-content li {
+    margin: 0.15em 0;
+    padding-left: 0.25em;
+}
+
+.cte-content li::marker {
+    color: #374151;
+}
+
+/* Inline math/chemistry chips */
+.cte-content math-field.cte-inline-mathfield {
+    display: inline-block;
+    width: auto;
+    max-width: max-content;
+    vertical-align: middle;
+    text-align: left;
+    margin: 0 2px;
+    padding: 1px 4px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background: transparent;
+    font-size: 1.05em;
+    min-height: auto;
+    outline: none;
+    cursor: default;
+    pointer-events: auto;
+    --primary-color: #2563eb;
+}
+
+.cte-content math-field.cte-inline-mathfield::part(virtual-keyboard-toggle),
+.cte-content math-field.cte-inline-mathfield::part(menu-toggle) {
+    display: none;
+}
+
+.cte-content b,
+.cte-content strong {
+    font-weight: 700;
+}
+
+.cte-content i,
+.cte-content em {
+    font-style: italic;
+}
+
+.cte-content u {
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    .cte-toolbar {
+        padding: 4px 6px;
+    }
+
+    .cte-toolbar-btn {
+        min-width: 28px;
+        height: 28px;
+    }
+
+    .cte-content,
+    .cte-placeholder {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+}
