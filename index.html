@@ -1,43 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dressing Sense - Tell us how it went</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+<body>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+    <div class="card">
+        <div class="header">
+            <div class="brand-name">Dressing Sense</div>
+            <div class="brand-eyebrow">Since 1999 &middot; Secunderabad</div>
+            <div class="brand-sub">Shop No. 30/31 Swapnalok Complex &middot;
+                Thank you for visiting </div>
+        </div>
+
+        <div class="tape"></div>
+
+        <div class="body-pad">
+            <!-- SCREEN: Review Builder (now the landing screen) -->
+            <div class="screen active" id="screen-high">
+                <div class="good-badge"><span class="dot"></span> Glad you enjoyed it!</div>
+                <div class="prompt" style="text-align:left; font-size:19px;">What stood out? Tap a few</div>
+                <div class="prompt-sub" style="text-align:left; margin-bottom:16px;">We'll turn your picks into a note
+                    &middot; tap the text below to edit it.</div>
+
+                <div class="chip-row" id="chip-row"></div>
+
+                <div class="review-option">
+                    <div class="review-option-label">
+                        <span>Your review</span>
+                        <span>tap to edit</span>
+                    </div>
+                    <div class="review-text placeholder" id="review-text" contenteditable="true">Select a few words
+                        above to build your note...</div>
+                    <button class="copy-btn" id="copy-btn" disabled>Copy this note</button>
+                </div>
+
+                <hr class="divider-line">
+
+                <div class="pre-post-note">Please copy the review, and paste it on the next screen.</div>
+                <a class="post-btn" id="google-post-btn" href="#" target="_blank" rel="noopener">Post my review on
+                    Google</a>
+                <div class="post-hint">This opens Google's review page in a new tab. Paste your note there and submit it
+                    yourself.</div>
+            </div>
+
+            <div class="footer-mark">
+                <span>Dressing Sense &middot; Secunderabad</span>
+                <a href="https://chat.whatsapp.com/Bk3kPLKUaZlKkKqsW77gdh" target="_blank" rel="noopener" id="whatsapp-btn" class="wa-button">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.51 2 12.04 2zm5.83 14.14c-.24.68-1.41 1.33-1.94 1.4-.5.07-1.11.1-1.79-.11-.41-.13-.94-.3-1.62-.6-2.84-1.23-4.7-4.1-4.84-4.29-.14-.19-1.16-1.54-1.16-2.94 0-1.4.73-2.09 1-2.38.24-.26.53-.32.71-.32.18 0 .35 0 .5.01.16.01.38-.06.6.46.24.58.8 2 .87 2.14.07.14.11.31.02.5-.09.19-.13.31-.26.47-.13.16-.28.36-.4.48-.13.13-.27.28-.12.55.16.28.7 1.16 1.51 1.88 1.04.93 1.92 1.22 2.19 1.36.28.14.44.11.6-.07.16-.18.68-.79.87-1.06.18-.28.36-.23.6-.14.24.09 1.53.72 1.79.85.27.14.44.2.51.31.07.12.07.66-.17 1.34z"/>
+                    </svg>
+                    connect with us on WhatsApp
+                </a>
+                <a href="https://www.instagram.com/dressingsense0?igsh=Z3VlcGdncmoyY2x4" target="_blank" rel="noopener"
+                    class="ig-button">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2" y="2" width="20" height="20" rx="5.5" stroke="currentColor" stroke-width="1.8" />
+                        <circle cx="12" cy="12" r="4.3" stroke="currentColor" stroke-width="1.8" />
+                        <circle cx="17.3" cy="6.7" r="1.15" fill="currentColor" />
+                    </svg>
+                    Follow us on Instagram
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast">Copied! Now tap "Post my review on Google" and paste it in the review box.</div>
+
+    <script src="script.js"></script>
+
+</body>
+
 </html>
